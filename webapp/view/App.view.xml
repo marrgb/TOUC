@@ -1,0 +1,48 @@
+<mvc:View
+	controllerName="ar.com.aduar.controller.App"
+	xmlns="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:u="sap.ui.unified"
+	displayBlock="true">
+	<u:Shell
+		id="BasicShell"
+		icon="{/logo}">
+		<u:headItems>
+			<u:ShellHeadItem
+				tooltip="{i18n>MenuTooltip}"
+				icon="sap-icon://menu2"
+				press="handlePressConfiguration" />
+			<u:ShellHeadItem
+				tooltip="Home"
+				icon="sap-icon://home"
+				visible="true"
+				press="handlePressHome" />
+		</u:headItems>
+		<u:headEndItems>
+			<u:ShellHeadItem
+				icon="sap-icon://log"
+				tooltip="Logoff"
+				press="handlePressLogoff" />
+		</u:headEndItems>
+		<u:user>
+			<u:ShellHeadUserItem
+				image="sap-icon://person-placeholder"
+				username="Marco van Basten"
+				press="handleUserItemPressed" />
+		</u:user>
+		<u:search>
+			<SearchField
+				search="handleSearchPressed"/>
+		</u:search>
+
+		<App class="myAppDemoWT">
+			<pages>
+				<Page title="{i18n>homePageTitle}">
+					<content>
+						<mvc:XMLView viewName="ar.com.aduar.view.HelloPanel"/>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</u:Shell>
+</mvc:View>

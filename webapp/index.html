@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+	<title>Test Open User Creation</title>
+
+
+	<script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+	<script>
+	  // Initialize Firebase
+	  var config = {
+	    apiKey: "AIzaSyC1QwoA_Wwiko-G0ic-3sDPDIkZSccOICU",
+	    authDomain: "testopenusercreate.firebaseapp.com",
+	    databaseURL: "https://testopenusercreate.firebaseio.com",
+	    projectId: "testopenusercreate",
+	    storageBucket: "testopenusercreate.appspot.com",
+	    messagingSenderId: "51714530956"
+	  };
+	  firebase.initializeApp(config);
+	</script>
+	<script src="https://cdn.firebase.com/libs/firebaseui/1.0.1/firebaseui.js"></script>
+	<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/1.0.1/firebaseui.css" />
+		
+	<script
+		id="sap-ui-bootstrap"
+		src="https://openui5.hana.ondemand.com/resources/sap-ui-core.js"
+		data-sap-ui-theme="sap_belize"
+		data-sap-ui-libs="sap.m"
+		data-sap-ui-compatVersion="edge"
+		data-sap-ui-preload="async"
+		data-sap-ui-resourceroots='{
+			"ar.com.aduar": "./"
+		}'>
+	</script>
+	<script>
+		sap.ui.getCore().attachInit(function () {
+			new sap.m.Shell({
+				app: new sap.ui.core.ComponentContainer({
+					name: "ar.com.aduar"
+				})
+			}).placeAt("content");
+		});
+	</script>
+</head>
+<body class="sapUiBody" id="content">
+</body>
+</html>

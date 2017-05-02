@@ -1,0 +1,15 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<Dialog
+		id="logof"
+		title="{i18n>logoffTitle}">
+
+    <Button
+      text="{i18n>confirmLogoff}"
+      press="onLogoff"
+      class="sapUiSmallMarginEnd"/>
+	</Dialog>
+
+
+</core:FragmentDefinition>
