@@ -2,13 +2,13 @@
 	xmlns="sap.m"
 	xmlns:core="sap.ui.core">
 	<Dialog
-		id="loggin"
-		title="{i18n>logginTitle}">
+		id="logoff"
+		title="{i18n>logoffTitle}">
 
 		<beginButton>
     <Button
       text="{i18n>btnSi}"
-      press="onLoggin"
+      press="onLogoff"
       class="sapUiSmallMarginEnd"/>
 		</beginButton>
 
@@ -20,7 +20,7 @@
 		</endButton>
 
 		<content>
-					<Text text="{i18n>logginText}"/>
+					<Text text="{i18n>logofText}"/>
 		</content>
 	</Dialog>
 
