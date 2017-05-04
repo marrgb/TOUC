@@ -16,6 +16,10 @@ sap.ui.define([
 			MessageToast.show(sMsg);
 		},
 
+		onLogoff : function() {
+			MessageToast.show("Logged off")
+		},
+
 		onOpenDialog : function () {
 			var oView = this.getView();
 			var oDialog = oView.byId("helloDialog");

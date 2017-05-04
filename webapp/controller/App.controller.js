@@ -9,18 +9,13 @@ sap.ui.define([
 			MessageToast.show("Config Menu pressed")
 		},
 		handlePressLogoff : function() {
-			// MessageToast.show("Logoff pressed")
-			var oView = this.getView();
-			var oDialog = oView.byId("logoff");
-			// create dialog lazily
-			if (!oDialog) {
-				// create dialog via fragment factory
-				oDialog = sap.ui.xmlfragment(oView.getId(), "ar.com.aduar.view.Loggin");
-				// connect dialog to view (models, lifecycle)
-				oView.addDependent(oDialog);
+			this._getDialog().open();
+		},
+		_getDialog : function() {
+			if (!this._oDialog) {
+				this._oDialog = sap.ui.xmlfragment("ar.com.aduar.view.loggin", this);
 			}
-
-			oDialog.open();
+			return this._oDialog;
 		},
 		handleUserItemPressed : function() {
 			MessageToast.show("User pressed")
