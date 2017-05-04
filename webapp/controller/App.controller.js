@@ -85,6 +85,9 @@ sap.ui.define([
 		onCloseDialog : function() {
 			this._oDialog.destroyDependents();
 			this._oDialog.close();
+		},
+		onUserCreate : function() {
+			
 		}
 	});
 

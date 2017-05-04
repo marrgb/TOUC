@@ -20,7 +20,11 @@
 		</endButton>
 
 		<content>
-					<Text text="{i18n>logginText}"/>
+			<Text text="{i18n>logginText}"/>
+			<button
+				text="{i18n>btnCreateUser}"
+	      press="onUserCreate"
+	      class="sapUiSmallMarginEnd"/>
 		</content>
 	</Dialog>
 
